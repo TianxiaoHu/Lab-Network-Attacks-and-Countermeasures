@@ -77,6 +77,24 @@ p1p1.17.ip.56.pcap 是某服务器上的抓包文件（仅保留了数据包头�
 
 - [扫描结果始终返回None的解决方法](https://segmentfault.com/q/1010000009473176?sort=created)。
 
+## Lab4 
+### 作业要求
+采用适合的工具，或raw socket方法编程（或socket编程），实现某个虚拟机上防止端口扫描的功能。
+
+## 思路概述
+用[nmap](https://nmap.org/download.html#macosx)扫描工具配合[PSAD](http://cipherdyne.org/psad/docs/install.html)端口防扫描软件完成。
+
+## Lab5 缓冲区溢出漏洞
+### 作业要求
+给定具有漏洞的源代码heap.c：
+- 假定heap.c 编译成为heap可执行程序后，属主为root ，具备suid标志位。
+- 要求利用此程序的堆溢出漏洞，获取root权限（得到具备root权限的shell）
+
+### 思路概述
+gcc新的编译器版本新增了许多安全防护功能，重新编译heap.c文件时会出现很多问题，而绕过编译器的防护很复杂，故直接在提供的虚拟主机中进行实验。
+
+具体原理参考：[缓冲区溢出攻击（含示例）](http://blog.csdn.net/tyskfs2/article/details/42318531)
+
 ## Lab6 木马后门程序
 ### 作业要求
 所编写软件运行于目标主机，通过网络接收客户端连接，在目标主机上执行客户端提交的指令。
